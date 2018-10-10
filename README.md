@@ -7,9 +7,9 @@ Augustus: http://bioinf.uni-greifswald.de/augustus/binaries/ <br>
 Edirect: https://dataguide.nlm.nih.gov/edirect/install.html <br>
 BioPerl: http://bioperl.org/INSTALL.html <br>
 ### Files:
-probe.fas: the file contains all kinds of opsin protein sequences, including 5 LW, 7 B, 7 UV, 6 Rh7, 6 Copsin, 6 GO/RGR opsins. Used for blastp against Proteome or tblastn against Genome. <br>
-protein_profile.prf1: the file contains protein profile for opsin. Generated from alignment of probe.fas, using ‘msa2prfl.pl probe.aln > fam.prfl’. Used for gene predicting when running Augustus. <br>
-fasta-splitter.pl: split large fasta file to multiple small fasta files for online blast. <br>
+* probe.fas: the file contains all kinds of opsin protein sequences, including 5 LW, 7 B, 7 UV, 6 Rh7, 6 Copsin, 6 GO/RGR opsins. Used for blastp against Proteome or tblastn against Genome. <br>
+* protein_profile.prf1: the file contains protein profile for opsin. Generated from alignment of probe.fas, using ‘msa2prfl.pl probe.aln > fam.prfl’. Used for gene predicting when running Augustus. <br>
+* fasta-splitter.pl: split large fasta file to multiple small fasta files for online blast. <br>
 
 ## Workflow:
 ### Proteome:
