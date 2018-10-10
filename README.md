@@ -35,6 +35,6 @@ Blast potential opsin sequences against online database, exclude incorrect seque
 Align new-found opsin sequences together with opsin sequences in probe.fas, construct a tree. <br>
 Determine number and type of new-found opsin genes. <br>
 
-## Problems still need to address:
+## Problems still need to be addressed:
 Hard to tell whether the new-found opsin sequences are actual real genes or pseudogenes. <br>
 Might get partial opsin sequences, 3 possibilities: 1) Augustus failed to predict upstream or downstream exon. 2) The sequencing quality is not so good that a gap appears at the range of the opsin gene. 3) That is debris of opsin that had lost the function early in evolution. How to tell?
