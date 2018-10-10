@@ -13,27 +13,27 @@ fasta-splitter.pl: split large fasta file to multiple small fasta files for onli
 
 ## Workflow:
 ### Proteome:
-Download Proteome data from “NCBI Assembly” or “Ensemble” (using Edirect). <br>
-Make protein blast library. <br>
-Blastp probe.fas against the library (evalue=1e-20) <br>
-Extract seqid of potential opsin sequences from blastp output files. <br>
-Blast potential opsin sequences against online database, exclude incorrect sequences or pseudogenes. <br>
-Align new-found opsin sequences together with opsin sequences in probe.fas, construct a tree. <br>
-Determine number and type of new-found opsin genes. <br>
+* Download Proteome data from “NCBI Assembly” or “Ensemble” (using Edirect). <br>
+* Make protein blast library. <br>
+* Blastp probe.fas against the library (evalue=1e-20) <br>
+* Extract seqid of potential opsin sequences from blastp output files. <br>
+* Blast potential opsin sequences against online database, exclude incorrect sequences or pseudogenes. <br>
+* Align new-found opsin sequences together with opsin sequences in probe.fas, construct a tree. <br>
+* Determine number and type of new-found opsin genes. <br>
 ### Genome:
-Download Genome data from “NCBI Assembly” or “Ensemble” (using Edirect). <br>
-Make nucleotide blast library. <br>
-tblastn probe.fas against the library. <br>
-Extract information from tblastn output files, including seqid, start and end position of matching part of subject sequence (usually the subject sequences are assembled scaffolds or contigs, which is very long) <br>
-Efetch the partial sequences base on the information (expanding the original matching range to 10000 bp upstream and 10000 bp downstream in order to include the complete gene) from NCBI <br>
-Run Augustus with input of protein profile (protein_profile.prf1) against the fetched partial genomic file to predict proteins. <br>
-Extract predicted protein sequences form Augustus output file. <br>
-Make protein blast library using predicted protein sequences. <br>
-Blastp probe.fas against the library (evalue=1e-20) <br>
-Extract seqid of potential opsin sequences from blastp output files. <br>
-Blast potential opsin sequences against online database, exclude incorrect sequences or pseudogenes. <br>
-Align new-found opsin sequences together with opsin sequences in probe.fas, construct a tree. <br>
-Determine number and type of new-found opsin genes. <br>
+* Download Genome data from “NCBI Assembly” or “Ensemble” (using Edirect). <br>
+* Make nucleotide blast library. <br>
+* tblastn probe.fas against the library. <br>
+* Extract information from tblastn output files, including seqid, start and end position of matching part of subject sequence (usually the subject sequences are assembled scaffolds or contigs, which is very long) <br>
+* Efetch the partial sequences base on the information (expanding the original matching range to 10000 bp upstream and 10000 bp downstream in order to include the complete gene) from NCBI <br>
+* Run Augustus with input of protein profile (protein_profile.prf1) against the fetched partial genomic file to predict proteins. <br>
+* Extract predicted protein sequences form Augustus output file. <br>
+* Make protein blast library using predicted protein sequences. <br>
+* Blastp probe.fas against the library (evalue=1e-20) <br>
+* Extract seqid of potential opsin sequences from blastp output files. <br>
+* Blast potential opsin sequences against online database, exclude incorrect sequences or pseudogenes. <br>
+* Align new-found opsin sequences together with opsin sequences in probe.fas, construct a tree. <br>
+* Determine number and type of new-found opsin genes. <br>
 
 ## Problems still need to be addressed:
 Hard to tell whether the new-found opsin sequences are actual real genes or pseudogenes. <br>
